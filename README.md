@@ -1,5 +1,8 @@
 # Rideshare Rails
 
+## Trello
+Here is the link to our [trello]([stage 2](https://trello.com/b/ebwkSgfi/rideshare-rails) for this project. 
+
 ## Introduction
 
 In this project you will build a website to model a small community ridesharing app.
