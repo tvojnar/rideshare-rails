@@ -1,7 +1,7 @@
 # Rideshare Rails
 
 ## Trello
-Here is the link to our [trello]([stage 2](https://trello.com/b/ebwkSgfi/rideshare-rails) for this project. 
+Here is the link to our [trello](https://trello.com/b/ebwkSgfi/rideshare-rails) for this project. 
 
 ## Introduction
 
