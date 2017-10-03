@@ -10,8 +10,9 @@ class PassengersController < ApplicationController
   def new
     @passenger = Passenger.new
   end
-# TODO: add these methods in when I add create functionality
+
   def create
+    # use strong params to limit the fields that the user can populate with data
     strong_params = passenger_params
     @passenger = Passenger.new(strong_params)
 
