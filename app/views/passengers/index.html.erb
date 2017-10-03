@@ -1,0 +1,12 @@
+<h1>Index page for passengers</h1>
+
+<section>
+  <ul>
+    <% @passengers.each do |passenger| %>
+    <li>
+      <%# TODO: make this a link to the show page for the passenger %>
+      <%= passenger.name %>
+    </li>
+    <% end %>
+  </ul>
+</section>
