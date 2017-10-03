@@ -13,8 +13,7 @@ class PassengersController < ApplicationController
 
   def create
     # use strong params to limit the fields that the user can populate with data
-    strong_params = passenger_params
-    @passenger = Passenger.new(strong_params)
+    @passenger = Passenger.new(passenger_params)
 
     if @passenger.save
       # if the save was sucessful then:
@@ -25,10 +24,25 @@ class PassengersController < ApplicationController
     end # if/else
   end # create
 
+  def edit
+    @passenger = Passenger.find(params[:id])
+  end # edit
+
+  def update
+    @passenger = Passenger.find(params[:id])
+    @passenger.update_attributes(passenger_params)
+
+    if @passenger.save
+      redirect_to passenger_path(@passenger)
+    else
+      render :edit
+    end # if/else
+  end # update
+
   private
     def passenger_params
       return params.require(:passenger).permit(:name, :phone_number)
     end
 
-  # TODO: make edit use strong params too!
+
 end
