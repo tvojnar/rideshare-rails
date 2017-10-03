@@ -39,6 +39,12 @@ class PassengersController < ApplicationController
     end # if/else
   end # update
 
+  def destroy
+    @passenger = Passenger.find(params[:id])
+    @passenger.destroy
+    redirect_to passengers_path
+  end # destroy
+
   private
     def passenger_params
       return params.require(:passenger).permit(:name, :phone_number)
