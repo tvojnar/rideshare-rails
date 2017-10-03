@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+/***********************/
+/* GENERAL ELEMENT CSS */
+/***********************/
+@import url('https://fonts.googleapis.com/css?family=Bubbler One');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Gafata');
+
+body {
+  font-family: 'Gafata'
+}
+
+a {
+  text-decoration: none;
+  color: #49434F;
+}
+
+a:hover {
+  color: #29CEA8;
+}
+
+/***********************/
+/*  APPLICATION CSS    */
+/***********************/

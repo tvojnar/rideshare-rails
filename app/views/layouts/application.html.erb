@@ -9,6 +9,34 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Rideshare</h1>
+      <nav>
+        <ul>
+          <li>
+            Drivers
+          </li>
+          <li>
+            <%= link_to "Passengers", passengers_path %>
+          </li>
+          <li>
+            Add driver
+          </li>
+          <li>
+            Add passenger
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>
+        &copy; 2017 Tamira and Roxanne
+      </p>
+    </footer>
+
+
   </body>
 </html>
