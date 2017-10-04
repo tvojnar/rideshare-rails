@@ -1,0 +1,49 @@
+<h2>Show page for trip</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>
+      Trip ID
+    </th>
+    <th>
+      Date
+    </th>
+    <th>
+      Passenger ID
+    </th>
+    <th>
+      Driver ID
+    </th>
+    <th>
+      Cost
+    </th>
+    <th>
+      Rating
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <%= @trip.id %>
+    </td>
+    <td>
+      <%= @trip.date %>
+    </td>
+    <td>
+      <%= @trip.passenger_id %>
+    </td>
+    <td>
+      <%= @trip.driver_id %>
+    </td>
+    <td>
+      <%# TODO: move this logic somewhere else? %>
+      $<%= (@trip.cost/100).round(2) %>
+    </td>
+    <td>
+      <%= @trip.rating %>
+    </td>
+  </tr>
+  </tbody>
+</table>
