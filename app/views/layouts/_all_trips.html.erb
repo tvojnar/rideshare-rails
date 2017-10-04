@@ -25,27 +25,30 @@
     </thead>
     <tbody>
     <% model.trips.each do |trip| %>
+    <%= link_to trip_path(trip) do %>
     <tr>
+
       <td>
-        <%= link_to trip.id, trip_path(trip)%>
+        <%= link_to trip.id, trip_path(trip) %>
       </td>
       <td>
-        <%= trip.date %>
+        <%= link_to trip.date, trip_path(trip) %>
       </td>
       <td>
-        <%= trip.passenger_id %>
+        <%=  link_to trip.passenger_id, trip_path(trip) %>
       </td>
       <td>
-        <%= trip.driver_id %>
+        <%=  link_to trip.driver_id, trip_path(trip) %>
       </td>
       <td>
         <%# TODO: move this logic somewhere else? %>
-        $<%= (trip.cost/100).round(2) %>
+        $<%=  link_to (trip.cost/100).round(2), trip_path(trip) %>
       </td>
       <td>
-        <%= trip.rating %>
+        <%=  link_to trip.rating, trip_path(trip) %>
       </td>
     </tr>
+      <% end %>
     <% end %>
     </tbody>
   </table>
