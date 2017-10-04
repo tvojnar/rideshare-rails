@@ -1,16 +1,22 @@
-<h1><%#= driver.name %></h1>
+<h1><%= @driver.name %>'s Details</h1>
 <%# trip_list =  trips.find_all[:driver_id] %>
 <section>
+  <p>
+    <%= link_to "Edit", edit_driver_path(@driver) %>
+  </p>
+  <p>
+    <%= link_to "Delete", driver_path(@driver), method: :delete, data: {confirm: "Are you sure you want to delete this driver?"} %>
+  </p>
   <ul>
     <li>
-        <%# total_earnings = driver.earnings * (1 - 0.15) %>
-        Earnings: <%#= total_earnings %>
+        Earnings: <%= @driver.total_cost %>
     </li>
     <li>
-      <%# total_cost = 0
-      <%# trip_list.each do |voyage|
-      total_cost << voyage.cost %>
-      Rating: <%#  total_cost.sum/(total_cost.length) %>
+      Rating: <%= @driver.rating %>
     </li>
-    <%# end %>
+    <li>
+    Trips:
+    <%= render partial: "layouts/all_trips", locals: { model: @driver} %>
+    </li>
+
   </ul>
