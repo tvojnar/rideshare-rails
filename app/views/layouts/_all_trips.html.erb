@@ -1,3 +1,4 @@
+<%# TODO: make every td a link to the show page for that trip! %>
 <% if model.trips.count > 0 %>
   <table>
     <thead>
@@ -32,10 +33,10 @@
         <%= trip.date %>
       </td>
       <td>
-        <%= trip.driver_id %>
+        <%= trip.passenger_id %>
       </td>
       <td>
-        <%= trip.passenger_id %>
+        <%= trip.driver_id %>
       </td>
       <td>
         <%# TODO: move this logic somewhere else? %>
