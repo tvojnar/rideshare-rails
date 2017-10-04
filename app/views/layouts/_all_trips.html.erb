@@ -38,7 +38,8 @@
         <%= trip.passenger_id %>
       </td>
       <td>
-        <%= trip.cost %>
+        <%# TODO: move this logic somewhere else? %>
+        $<%= (trip.cost/100).round(2) %>
       </td>
       <td>
         <%= trip.rating %>
