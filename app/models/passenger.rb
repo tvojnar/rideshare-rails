@@ -12,4 +12,5 @@ class Passenger < ApplicationRecord
     end # .each
     return (total / 100).round(2)
   end
+
 end
