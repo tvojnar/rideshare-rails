@@ -38,3 +38,29 @@ a:hover {
 /***********************/
 /*  APPLICATION CSS    */
 /***********************/
+
+/***********************/
+/*  TABLE CSS    */
+/***********************/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+
+th {
+    height: 50px;
+    background-color: #29CEA8;
+}
+
+th, td {
+  padding: 1%;
+}
+
+tr:hover {background-color: #A2F6E8}

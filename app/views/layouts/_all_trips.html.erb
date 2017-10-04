@@ -1,0 +1,54 @@
+<% if model.trips.count > 0 %>
+  <table>
+    <thead>
+    <tr>
+      <th>
+        Trip ID
+      </th>
+      <th>
+        Date
+      </th>
+      <th>
+        Passenger ID
+      </th>
+      <th>
+        Driver ID
+      </th>
+      <th>
+        Cost
+      </th>
+      <th>
+        Rating
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% model.trips.each do |trip| %>
+    <tr>
+      <td>
+        <%= trip.id %>
+      </td>
+      <td>
+        <%= trip.date %>
+      </td>
+      <td>
+        <%= trip.driver_id %>
+      </td>
+      <td>
+        <%= trip.passenger_id %>
+      </td>
+      <td>
+        <%= trip.cost %>
+      </td>
+      <td>
+        <%= trip.rating %>
+      </td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <% else %>
+    <p class="no-trips">
+      <%= model.name %> has no trips
+    </p>
+  <% end %>
