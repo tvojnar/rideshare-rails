@@ -2,10 +2,10 @@
 
 <section>
   <ul>
-    <%# @drivers.each do |driver| %>
+    <% @drivers.each do |driver| %>
     <li>
-      <%#= link_to driver.name, driver_path(driver) %>
+      <%= link_to driver.name, driver_path(driver) %>
     </li>
-    <%# end %>
+    <% end %>
   </ul>
 </section>
