@@ -1,0 +1,21 @@
+<%= render partial: "layouts/error_messages", locals: { model: @trip} %>
+
+  <%= form_for @trip,  :html => {:class => 'form'}  do |f| %>
+    <%= f.label :driver_id %>
+    <%= f.number_field :driver_id %>
+
+    <%= f.label :passenger_id %>
+    <%= f.number_field :passenger_id %>
+
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+
+    <%# TODO: to make this display as 12.32 not 1232 replace 'f.number_field :cost' with 'value: @trip.cost_in_dollars' and then make the cost_in_dollars method and also have to do logic in controller to make the number give by the user in decimal form be converted to the non decimal form (to be the same as the seed data) %>
+    <%= f.label :cost %>
+    <%= f.number_field :cost %>
+
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+
+    <%= f.submit %>
+  <% end %>
