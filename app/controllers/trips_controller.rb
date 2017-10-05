@@ -13,10 +13,11 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
+    @trip.cost = @trip.remove_decimal_from_cost
 
     if @trip.save
-      # TODO: change where I rerout this to
-      redirect_to passengers_path
+      # TODO: Should I change this to a nester rout?
+      redirect_to passenger_path(@trip.passenger_id)
     else
       render :new
     end # if/else
@@ -29,9 +30,12 @@ class TripsController < ApplicationController
   def update
     @trip = Trip.find(params[:id])
     @trip.update_attributes(trip_params)
+    # removes the decimal that the user entered in the form to update the cost
+    @trip.cost = @trip.remove_decimal_from_cost
 
     if @trip.save
-      redirect_to trip_path(@trip)
+      # TODO: Should I change this to a nester rout?
+      redirect_to passenger_path(@trip.passenger_id)
     else
       render :edit
     end # if/else

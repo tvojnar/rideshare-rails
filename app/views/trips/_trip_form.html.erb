@@ -10,12 +10,15 @@
     <%= f.label :date %>
     <%= f.date_field :date %>
 
-    <%# TODO: to make this display as 12.32 not 1232 replace 'f.number_field :cost' with 'value: @trip.cost_in_dollars' and then make the cost_in_dollars method and also have to do logic in controller to make the number give by the user in decimal form be converted to the non decimal form (to be the same as the seed data) %>
+    <%# value: @trip.cost_in_dollars make the cost display in decimal form %>
+    <%#  step: :any allow the user to increment the cost by any amount, not just in increments of 1) %>
     <%= f.label :cost %>
-    <%= f.number_field :cost %>
+    <%= f.number_field :cost, value: @trip.cost_in_dollars, step: :any %>
 
-    <%= f.label :rating %>
-    <%= f.number_field :rating %>
-
+    <%# will only display the rating box if the trip already has a rating.... so it won't display in the new form, but it will display in the edit form %>
+    <% if @trip.rating %>
+      <%= f.label :rating %>
+      <%= f.number_field :rating %>
+    <% end %>
     <%= f.submit %>
   <% end %>
