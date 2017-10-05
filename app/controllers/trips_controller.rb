@@ -15,8 +15,8 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
 
     if @trip.save
-      # TODO: change where I rerout this to
-      redirect_to passengers_path
+      # TODO: Should I change this to a nester rout?
+      redirect_to passenger_path(@trip.passenger_id)
     else
       render :new
     end # if/else
@@ -31,7 +31,8 @@ class TripsController < ApplicationController
     @trip.update_attributes(trip_params)
 
     if @trip.save
-      redirect_to trip_path(@trip)
+      # TODO: Should I change this to a nester rout?
+      redirect_to passenger_path(@trip.passenger_id)
     else
       render :edit
     end # if/else
