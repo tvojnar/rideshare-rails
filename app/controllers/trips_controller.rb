@@ -18,7 +18,8 @@ class TripsController < ApplicationController
   def create
     @drivers = Driver.all
     @trip = Trip.new(trip_params)
-    @trip.cost = @trip.remove_decimal_from_cost
+    @trip.set_cost_in_dollars(params[:trip][:cost])
+    puts "After cost_dollars, cost is #{@trip.cost}"
 
     if @trip.save
       # TODO: Should I change this to a nester rout?

@@ -26,8 +26,9 @@ class Trip < ApplicationRecord
   end # cost_in_dollars
 
 # TODO: figure out why this is rounding down 50.55 to 50.0
-  def remove_decimal_from_cost
-    return (self.cost.to_f * 100)
+  def set_cost_in_dollars(cost_dollars)
+    puts "In cost_dollars, cost_dollars is #{cost_dollars}"
+    self.cost = cost_dollars.to_f * 100
   end
 
 end
