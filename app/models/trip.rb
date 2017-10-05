@@ -8,7 +8,10 @@ class Trip < ApplicationRecord
   validates_presence_of :passenger_id
   validates_presence_of :date
   validates_presence_of :cost
-  validates_inclusion_of :rating, :in => 0..5
+  validates :rating, allow_nil: true, length: {minimum: 0, maximum: 5 }
+
+
+  # validates_inclusion_of :rating, :in => 0..5
 
 
   # TODO: make this method work later!

@@ -49,7 +49,11 @@
 
       </td>
       <td>
-        <%=  link_to trip.rating, trip_path(trip) %>
+        <% if trip.rating %>
+          <%=  link_to trip.rating, trip_path(trip) %>
+        <% else %>
+          <%= link_to "Unrated", trip_path(trip) %>
+        <% end %>
       </td>
     </tr>
     <% end %>
