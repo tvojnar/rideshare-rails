@@ -45,6 +45,12 @@ class TripsController < ApplicationController
     end # if/else
   end # update
 
+  def destroy
+    @trip = Trip.find(params[:id])
+    @trip.destroy
+    redirect_to passenger_path(@trip.passenger_id)
+  end
+
 private
 def trip_params
   return params.require(:trip).permit(:driver_id, :passenger_id, :date, :rating, :cost)
