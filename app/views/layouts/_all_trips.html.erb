@@ -24,14 +24,11 @@
     </tr>
     </thead>
     <tbody>
-<<<<<<< HEAD
     <% model.trips.each do |trip| %>
     <%= link_to trip_path(trip) do %>
-=======
       <%# display trip in decending order by date %>
     <% all_trips = model.trips.order(:date) %>
     <% all_trips.each do |trip| %>
->>>>>>> a55ef0ad28177c51d5d3e659224b5d31b63ac965
     <tr>
 
       <td>
@@ -48,11 +45,9 @@
       </td>
       <td>
         <%# TODO: move this logic somewhere else? %>
-<<<<<<< HEAD
+
         $<%=  link_to (trip.cost/100).round(2), trip_path(trip) %>
-=======
         $<%= (trip.cost.to_f/100).round(2) %>
->>>>>>> a55ef0ad28177c51d5d3e659224b5d31b63ac965
       </td>
       <td>
         <%=  link_to trip.rating, trip_path(trip) %>
