@@ -44,7 +44,11 @@
       $<%= (@trip.cost/100).round(2) %>
     </td>
     <td>
-      <%= @trip.rating %>
+      <% if @trip.rating.nil? %>
+        <%= render partial: "add_rating" %>
+      <% else %>
+        <%= @trip.rating %>
+      <% end %>
     </td>
     <td>
         <%= link_to "Edit", edit_trip_path(@trip) %>
