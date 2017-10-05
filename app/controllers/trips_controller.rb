@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  # comment 
   def index
     @trips = Trip.all
   end
