@@ -14,8 +14,12 @@
     <%= f.label :cost %>
     <%= f.number_field :cost %>
 
-    <%= f.label :rating %>
-    <%= f.number_field :rating %>
+    <%# will only display the rating box if the trip already has a rating.... so it won't display in the new form, but it will display in the edit form %>
+    <% if @trip.rating %>
+      <%= f.label :rating %>
+      <%= f.number_field :rating %>
+    <% end %>
+
 
     <%= f.submit %>
   <% end %>
