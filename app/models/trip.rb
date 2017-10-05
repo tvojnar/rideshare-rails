@@ -17,7 +17,7 @@ class Trip < ApplicationRecord
   #   trip = trips.find(params[:id])
   #   return (trip.cost / 100).round(2)
   # end # cost_in_dollars
-  validates :rating, allow_blank: true
+  
   # This makes it so the cost will display in decimal form (12.34 vs 1234) in the edit form
   def cost_in_dollars
     return (self.cost.to_f / 100).round(2)
