@@ -28,16 +28,16 @@
   <tbody>
   <tr>
     <td>
-      <%= @trip.id %>
+      <%=@trip.id%>
     </td>
     <td>
       <%= @trip.date %>
     </td>
     <td>
-      <%= @trip.passenger_id %>
+      <%= link_to @trip.passenger_id, passenger_path(@trip.passenger_id) %>
     </td>
     <td>
-      <%= @trip.driver_id %>
+      <%=  link_to @trip.driver_id, driver_path(@trip.driver_id) %>
     </td>
     <td>
       <%# TODO: move this logic somewhere else? %>

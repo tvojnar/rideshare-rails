@@ -45,7 +45,7 @@
       <td>
         <%# TODO: move this logic somewhere else? %>
 
-        $<%=  link_to (trip.cost/100).round(2), trip_path(trip) %>
+        $<%=  link_to (trip.cost.to_f/100).round(2), trip_path(trip) %>
 
       </td>
       <td>
