@@ -4,8 +4,12 @@
     <%= f.label :driver_id %>
     <%= f.number_field :driver_id %>
 
+    <% if @trip.passenger_id %>
+      <%= f.hidden_field :passenger_id %>
+    <% else %>
     <%= f.label :passenger_id %>
     <%= f.number_field :passenger_id %>
+    <% end %>
 
     <%= f.label :date %>
     <%= f.date_field :date %>

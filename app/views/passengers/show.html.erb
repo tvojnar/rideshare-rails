@@ -1,6 +1,13 @@
 
 <h1><%= @passenger.name %></h1>
 <p>
+  <%= link_to "Passengers trips index page", passenger_trips_path(@passenger.id) %>
+
+</p>
+<p>
+  <%= link_to "Add a trip for ", new_passenger_trip_path(@passenger) %>
+</p>
+<p>
   Phone number: <%= @passenger.phone_number %>
 </p>
 <p>
