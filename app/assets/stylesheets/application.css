@@ -35,9 +35,37 @@ a:hover {
   color: #29CEA8;
 }
 
+main {
+  clear: both;
+}
+
 /***********************/
-/*  APPLICATION CSS    */
+/*  HEADER CSS    */
 /***********************/
+
+header h1 {
+  font-size: 50px;
+  /* why isn't this working to change the color of the h1 in header? */
+  color: #29CEA8;
+  display: inline-block;
+  float: left;
+  width: 40%;
+}
+
+header nav {
+  float: right;
+  width: 40%;
+  margin-top: 3%;
+}
+
+header h1 a:hover {
+  color: #29CEA8;
+}
+
+header ul li {
+  display: inline-block;
+  padding: 1%;
+}
 
 /***********************/
 /*  TABLE CSS    */
