@@ -16,7 +16,6 @@ class TripsController < ApplicationController
   end # new
 
   def create
-    # @drivers = Driver.all 
     @trip = Trip.new(trip_params)
     @trip.cost = @trip.remove_decimal_from_cost
 

@@ -1,8 +1,14 @@
 <%= render partial: "layouts/error_messages", locals: { model: @trip} %>
 
   <%= form_for @trip,  :html => {:class => 'form'}  do |f| %>
+
     <%= f.label :driver_id %>
-    <%= f.number_field :driver_id, value: @drivers.sample.id %>
+    <% if @trip.driver_id.nil? %>
+      <%= f.number_field :driver_id, value: @drivers.sample.id %>
+    <% else %>
+      <%= f.number_field :driver_id %>
+    <% end %>
+
     <% if @trip.passenger_id %>
     <%= f.hidden_field :passenger_id %>
     <%else %>
