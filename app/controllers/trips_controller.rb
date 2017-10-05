@@ -9,6 +9,7 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
+    @drivers = Driver.all
     if params[:passenger_id]
       @trip.passenger_id = params[:passenger_id]
     end

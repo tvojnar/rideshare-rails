@@ -2,11 +2,13 @@
 
   <%= form_for @trip,  :html => {:class => 'form'}  do |f| %>
     <%= f.label :driver_id %>
-    <%= f.number_field :driver_id %>
-
+    <%= f.number_field :driver_id, value: @drivers.sample.id %>
+    <% if @trip.passenger_id %>
+    <%= f.hidden_field :passenger_id %>
+    <%else %>
     <%= f.label :passenger_id %>
     <%= f.number_field :passenger_id %>
-
+      <% end %>
     <%= f.label :date %>
     <%= f.date_field :date %>
 
