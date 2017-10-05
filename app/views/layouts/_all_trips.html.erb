@@ -24,8 +24,7 @@
     </tr>
     </thead>
     <tbody>
-    <% model.trips.each do |trip| %>
-    <%= link_to trip_path(trip) do %>
+
       <%# display trip in decending order by date %>
     <% all_trips = model.trips.order(:date) %>
     <% all_trips.each do |trip| %>
@@ -53,7 +52,6 @@
         <%=  link_to trip.rating, trip_path(trip) %>
       </td>
     </tr>
-      <% end %>
     <% end %>
     </tbody>
   </table>
