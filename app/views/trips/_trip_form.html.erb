@@ -16,7 +16,7 @@
     <%= f.number_field :passenger_id %>
       <% end %>
     <%= f.label :date %>
-    <%= f.date_field :date %>
+    <%= f.date_field :date, value: Date.today%>
 
     <%# value: @trip.cost_in_dollars make the cost display in decimal form %>
     <%#  step: :any allow the user to increment the cost by any amount, not just in increments of 1) %>

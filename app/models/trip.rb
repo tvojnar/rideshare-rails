@@ -8,7 +8,8 @@ class Trip < ApplicationRecord
   validates_presence_of :passenger_id
   validates_presence_of :date
   validates_presence_of :cost
-  validates :rating, allow_nil: true, length: {minimum: 0, maximum: 5 }
+  validates :rating, allow_nil: true, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 5}
+
 
 
   # validates_inclusion_of :rating, :in => 0..5
