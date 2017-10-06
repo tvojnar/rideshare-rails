@@ -1,6 +1,7 @@
 <div class="wrapper">
 <section class="passenger-show">
   <h2><%= @passenger.name %></h2>
+    <%= image_tag "portrait-1110689_640.png", alt: "Picture of a face", class: "passenger-pic" %>
   <ul>
     <li>
       <%= link_to "Edit", edit_passenger_path(@passenger) %>
@@ -12,6 +13,7 @@
       <%= link_to "Add New Trip", new_passenger_trip_path(@passenger)%>
     </li>
   </ul>
+
   <section class="passenger-info">
     <p>
       <strong>Phone number</strong>: <%= @passenger.phone_number %>
