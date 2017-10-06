@@ -20,7 +20,18 @@
   background: linear-gradient(to right, rgba(91, 192, 190, .5), rgba(58, 80, 107, 1)); /*Standard*/
   margin: 50px;
 }
+#driver-nav li{
+  display:inline-block;
+  padding:10px;
+  margin: 5px;
+  background-color:  rgba(28, 37, 65, 1);
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px  rgba(91, 192, 190, 1);
 
+}
+#driver-nav li a{
+  color: rgba(111, 255, 233, 1);
+}
 #all-drivers ul li{
   padding: 5px;
   list-style-type: none;
