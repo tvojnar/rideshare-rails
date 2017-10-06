@@ -13,5 +13,32 @@
   max-width: 960px;
   padding-right: 10px;
   padding-left:  10px;
+}
 
+.welcome-page {
+  text-align: center;
+}
+
+ .welcome-page h2 {
+   margin-top: 10%;
+  background-color: #C7EBF0;
+  padding: 12% 5%;
+  font-size: 350%;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout article {
+  background-color: #BAA7B0;
+  padding: 7% 5%;
+  width: 25%;
+  margin: 5%;
+}
+
+
+.checkout p {
+  font-size: 125%;
 }

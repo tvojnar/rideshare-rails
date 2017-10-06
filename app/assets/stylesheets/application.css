@@ -43,6 +43,11 @@ main {
 /*  HEADER CSS    */
 /***********************/
 
+header {
+  border-bottom: solid;
+  height: 100px;
+}
+
 header h1 {
   font-size: 50px;
   /* why isn't this working to change the color of the h1 in header? */
@@ -50,6 +55,7 @@ header h1 {
   display: inline-block;
   float: left;
   width: 40%;
+  margin-top: 1.5%;
 }
 
 header nav {
@@ -123,11 +129,8 @@ footer {
   /* negative value of footer height */
   height: 100px;
   clear: both;
-  background-color: purple;
+  background-color: #BFD5E2;
 }
-
-
-
 
 body:before {
   content: "";
