@@ -4,7 +4,7 @@
 
     <%= f.label :driver_id %>
     <% if @trip.driver_id.nil? %>
-      <%= f.number_field :driver_id, value: @drivers.sample.id %>
+      <%= f.collection_select( :driver_id, @drivers, :id, :name, :selected => @drivers.sample.id )%>
     <% else %>
       <%= f.number_field :driver_id %>
     <% end %>
