@@ -9,7 +9,7 @@ h2{
   vertical-align: middle;
 }
 
-section{
+#all-drivers{
   display: flex;
   padding: 10px;
   background-color: rgba(91, 192, 190, .5);
@@ -21,14 +21,14 @@ section{
   margin: 50px;
 }
 
-section, ul li{
+#all-drivers ul li{
   padding: 5px;
   list-style-type: none;
   display: inline-block;
   vertical-align: middle;
   text-shadow: 1px 1px 2px black;
+  color: white;
 }
-
-section, ul, li, a{
+#all-drivers ul li a{
   color:white;
 }
