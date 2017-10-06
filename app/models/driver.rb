@@ -16,8 +16,11 @@ class Driver < ApplicationRecord
     total_ratings = 0
     count = 0
     trips.each do |trip|
+      if trip.rating.nil?
+      else
       total_ratings += trip.rating
       count += 1
+      end
     end
     average = total_ratings/count
   end
