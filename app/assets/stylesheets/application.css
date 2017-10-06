@@ -101,14 +101,16 @@ table, th, td {
 
 th {
     height: 50px;
-    background-color: #29CEA8;
+    background-color: #C7EBF0;
 }
 
 th, td {
   padding: 1%;
 }
 
-tr:hover {background-color: #A2F6E8}
+tr:hover {
+  background-color: #B2ABBF;
+}
 
 /***********************/
 /* KEEP FOOTER AT BOTTOM*/

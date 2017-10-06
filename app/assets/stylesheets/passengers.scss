@@ -23,3 +23,43 @@
 /***********************/
 /* show CSS           */
 /***********************/
+
+.passenger-show {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.passenger-show h2 {
+  margin: 5% 5% 0% 5%;
+  font-size: 200%;
+  width: 30%;
+  border: solid #C7EBF0;
+  text-align: center;
+  padding: 1%;
+}
+
+.passenger-show ul {
+  margin-right: -7%;
+  margin-bottom: 7%;
+  width: 30%;
+
+}
+
+.passenger-show li {
+  display: inline-block;
+  padding: 2%;
+}
+
+.passenger-info {
+  clear: both;
+}
+
+.passenger-info p {
+  font-size: 125%;
+  text-align: center;
+}
+
+.passenger-info p:last-child {
+  margin-bottom: 15%;
+}
