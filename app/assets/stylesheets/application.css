@@ -92,3 +92,48 @@ th, td {
 }
 
 tr:hover {background-color: #A2F6E8}
+
+/***********************/
+/* KEEP FOOTER AT BOTTOM*/
+/***********************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+main {
+  overflow: auto;
+  padding-bottom: 100px;
+  /* must be same height as the footer */
+}
+
+footer {
+  position: relative;
+  /*margin-top: -180px;*/
+  margin-bottom: 0;
+  /* negative value of footer height */
+  height: 100px;
+  clear: both;
+  background-color: purple;
+}
+
+
+
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+
+}
