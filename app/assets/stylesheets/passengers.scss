@@ -11,13 +11,27 @@
 }
 .index h2 {
   text-align: left;
-  margin-bottom: 2%;
   margin-top: 2%;
   font-size: 200%;
+  background-color: #C7EBF0;
+  text-align: center;
+  padding: 2% 0%;
+}
+.list-passengers {
+
+}
+.index ul {
+  -webkit-column-count: 4;
+  -webkit-column-gap: 20px;
+  border-left: solid #C7EBF0;
+  border-right: solid #C7EBF0;
+  border-bottom: solid #C7EBF0;
+  padding: 3.5% 0% 3.5% 3.5%;
 }
 
 .index li {
   font-size: 125%;
+  list-style-type: none;
 }
 
 /***********************/
@@ -51,6 +65,12 @@
   background-color: #B2ABBF;
   border-radius: 0.2rem;
   margin: 2% 3% 0% 3%;
+
+/* should work to separate into two columns, but it doesn't */
+  // -webkit-column-count: 2;
+  // -webkit-column-gap: 40px;
+
+
 }
 
 .passenger-info {
@@ -65,6 +85,8 @@
 .passenger-info p:last-child {
   margin-bottom: 15%;
 }
+
+
 
 /***********************/
 /* new and edit CSS           */
