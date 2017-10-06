@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 <h2>All Drivers</h2>
+=======
+<div class="wrapper">
+  <h1>Index page for Drivers</h1>
+>>>>>>> df90da964cefad10e0442770dd283d4d06530857
 
-<section>
-  <ul>
-    <% @drivers.each do |driver| %>
-    <li>
-      <%= link_to driver.name, driver_path(driver) %>
-    </li>
-    <% end %>
-  </ul>
-</section>
+  <section>
+    <ul>
+      <% @drivers.each do |driver| %>
+      <li>
+        <%= link_to driver.name, driver_path(driver) %>
+      </li>
+      <% end %>
+    </ul>
+  </section>
+</div>

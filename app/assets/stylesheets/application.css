@@ -14,6 +14,16 @@
  *= require_self
  */
 
+ /***********************/
+ /* color pallet */
+ /***********************/
+/*
+#BAA7B0
+#B2ABBF
+#B1B5C8
+#BFD5E2
+#C7EBF0
+*/
 
 /***********************/
 /* GENERAL ELEMENT CSS */
@@ -23,16 +33,17 @@
 @import url('https://fonts.googleapis.com/css?family=Gafata');
 
 body {
-  font-family: 'Gafata'
+  font-family: 'Gafata';
+  color: #676571;
 }
 
 a {
   text-decoration: none;
-  color: #49434F;
+  color: #676571;
 }
 
 a:hover {
-  color: #29CEA8;
+  color: #C7EBF0;
 }
 
 main {
@@ -43,6 +54,11 @@ main {
 /*  HEADER CSS    */
 /***********************/
 
+header {
+  border-bottom: solid;
+  height: 100px;
+}
+
 header h1 {
   font-size: 50px;
   /* why isn't this working to change the color of the h1 in header? */
@@ -50,6 +66,7 @@ header h1 {
   display: inline-block;
   float: left;
   width: 40%;
+  margin-top: 1.5%;
 }
 
 header nav {
@@ -59,7 +76,7 @@ header nav {
 }
 
 header h1 a:hover {
-  color: #29CEA8;
+  color: #C7EBF0;;
 }
 
 header ul li {
@@ -84,11 +101,59 @@ table, th, td {
 
 th {
     height: 50px;
-    background-color: #29CEA8;
+    background-color: #C7EBF0;
 }
 
 th, td {
   padding: 1%;
 }
 
-tr:hover {background-color: #A2F6E8}
+tr:hover {
+  background-color: #B2ABBF;
+}
+
+/***********************/
+/* KEEP FOOTER AT BOTTOM*/
+/***********************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+main {
+  overflow: auto;
+  padding-bottom: 80px;
+  /* must be same height as the footer */
+}
+
+footer {
+  position: relative;
+  /*margin-top: -180px;*/
+  margin-bottom: 0;
+  /* negative value of footer height */
+  height: 80px;
+  clear: both;
+  background-color: #BFD5E2;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+
+}

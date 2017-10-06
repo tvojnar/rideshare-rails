@@ -1,3 +1,78 @@
 // Place all the styles related to the Passengers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/***********************/
+/* INDEX CSS           */
+/***********************/
+
+.index {
+
+}
+.index h2 {
+  text-align: left;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: 200%;
+}
+
+.index li {
+  font-size: 125%;
+}
+
+/***********************/
+/* show CSS           */
+/***********************/
+
+.passenger-show {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.passenger-show h2 {
+  margin: 5% 5% 0% 5%;
+  font-size: 200%;
+  width: 30%;
+  border: solid #C7EBF0;
+  text-align: center;
+  padding: 1%;
+}
+
+.passenger-show ul {
+  margin-right: -7%;
+  margin-bottom: 7%;
+  width: 30%;
+}
+
+.passenger-show li {
+  display: inline-block;
+  padding: 2%;
+}
+
+.passenger-info {
+  clear: both;
+}
+
+.passenger-info p {
+  font-size: 125%;
+  text-align: center;
+}
+
+.passenger-info p:last-child {
+  margin-bottom: 15%;
+}
+
+/***********************/
+/* new and edit CSS           */
+/***********************/
+
+.new-edit {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new-edit h2 {
+  margin: 5% 0%;
+}
