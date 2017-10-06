@@ -43,7 +43,6 @@
   margin-right: -7%;
   margin-bottom: 7%;
   width: 30%;
-
 }
 
 .passenger-show li {
@@ -62,4 +61,18 @@
 
 .passenger-info p:last-child {
   margin-bottom: 15%;
+}
+
+/***********************/
+/* new CSS           */
+/***********************/
+
+.new {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new h2 {
+  margin: 5% 0%;
 }
