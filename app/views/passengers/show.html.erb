@@ -1,4 +1,4 @@
-
+<div class="wrapper">
 <h1><%= @passenger.name %></h1>
 <p>
   Phone number: <%= @passenger.phone_number %>
@@ -15,4 +15,5 @@
 
 <%= render partial: "layouts/all_trips", locals: { model: @passenger} %>
 
+</div>
 <%# TODO: is there an easy way to make each row in the table link to that trip? %>
